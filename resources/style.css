@@ -75,8 +75,6 @@ a {
 
 
 
-
-
 /* HEADER */
 header {
   background-color: #3a4040;
@@ -87,9 +85,6 @@ header {
   align-items: center;
   position: fixed;
   z-index: 9;
-}
-#mobile-header {
-  display: none;
 }
 nav {
   width: 90%;
@@ -142,10 +137,11 @@ header .links a:hover {
 
 /* MOBILE HEADER */
 #mobile-header {
+  overflow: hidden;
   display: none;
   background-color: #3a4040;
   width: 100%;
-  height: fit-content;
+  height: auto;
   position: fixed;
 }
 .mobile-header {
@@ -173,7 +169,6 @@ header .links a:hover {
 }
 .mobile-header .logo {
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 .mobile-header .out {
   display: block;
@@ -225,7 +220,6 @@ header input[type="checkbox"] {
 }
 .slider .text-container h1 {
   margin-bottom: 1rem;
-  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4) ;
   font-size: 4.5rem;
   animation: slide-in-left 1s forwards;
 }
@@ -235,7 +229,7 @@ header input[type="checkbox"] {
   color: var(--light-text);
   font-weight: 300;
   margin-bottom: 2rem;
-  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  
   font-weight: 400;
   animation: slide-in-left 1s .3s forwards;
   opacity: 0;
@@ -286,12 +280,13 @@ header input[type="checkbox"] {
 
 /* IMAGE CONTAINER */
 .service-1 .img-container {
-  width: 55%;
+  max-width: 55%;
   height: 100%;
   display: block;
   overflow: hidden;
   border: 6px solid var(--accent);
-  border-radius: .6rem;
+  border-bottom-left-radius: .6rem;
+  border-top-left-radius: .6rem;
   margin-left: -20%;
   opacity: 0;
   transition: all 1.5s ease;
@@ -299,7 +294,6 @@ header input[type="checkbox"] {
 .service-1 .img-container img {
   width: auto;
   height: 100%;
-  right: 5%;
   position: relative;
   transition: transform .3s ease;
 }
@@ -754,8 +748,6 @@ input[type="email"], input[type='number'] {
   left: 0;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  border-bottom-right-radius: .5rem;
-  border-bottom-left-radius: .5rem;
 }
 .our-stylist .bottom-container .stylist-1 {
   background-image: url("/img/33G8x7_t20_kjYNB4.jpg");
@@ -941,6 +933,146 @@ hr {
   width: 80%;
 }
 
+
+
+@media  screen and (max-width: 1024px) {
+  header .links a {
+    font-size: 1rem;
+  }
+
+  /* ====== SLIDER ========== */
+  .slider {
+    overflow: hidden;
+  }
+  .slider .text-container {
+    top: 20%;
+  }
+  .slider .text-container h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  .slider .text-container p {
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  /* Service Beyond Expectation */
+  .service-1 {
+    overflow: hidden;
+  }
+  .service-1 .container {
+    overflow: hidden;
+    height: 65%;
+    width: 90%;
+    column-gap: 1rem;
+  }
+  .service-1 .img-container {
+    width: 50%;
+  }
+  .service-1 .img-container img {
+    right: 70%;
+  }
+
+
+  /* ========= ABOUT US ============ */
+  .about-us {
+    overflow: hidden;
+  }
+  .about-us .container {
+    width: 90%;
+    column-gap: 3rem;
+    justify-content: center;
+  }
+  .about-us .container-right {
+    width: 53%;
+    height: 650px;
+  }
+  .about-us .container-right img {
+    width: auto;
+    height: 100%;
+  }
+
+
+  /* OUR SERVICE 2 */
+  .service-2 {
+    overflow: hidden;
+  }
+  .service-2 .bottom-container {
+    column-gap: 2rem;
+  }
+  .service-2 .bottom-container .item {
+    height: 400px;
+    width: 33%;
+    margin: 0;
+    padding: 3rem 0;
+  }
+
+
+  /* GALLERY */
+  .section-4 {
+    overflow: hidden;
+  }
+  .section-4 .container .items {
+    height: 295px;
+  }
+  .section-4 .container h3 {
+    left: 10%;
+  }
+  .section-4 .container p {
+    left: 10%;
+    width: 90%;
+  }
+
+  /* ============= APPOINTMENT ========== */
+  .appointment {
+    overflow: hidden;
+  }
+  .appointment .container {
+    width: 95%;
+  }
+  .appointment img {
+    right: 80%;
+  }
+
+    /* ============= OUR STYLISTS ========== */
+    .our-stylist {
+      height: 1100px;
+      overflow: hidden;
+    }
+    .our-stylist .container {
+      width: 90%;
+    }
+    .our-stylist .bottom-container > div {
+      width: 30%;
+      height: 400px;
+    }
+    .contact-us {
+      height: 800px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+    .contact-us .container h2 {
+      margin-top: 4rem;
+    }
+    .contact-us .container form {
+      margin-bottom: 4rem;
+    }
+
+     /* ============= FOOTER ========== */
+    footer {
+      overflow: hidden;
+      height: 500px;
+    }
+    footer .container {
+      align-items: flex-start;
+      height: 50%;
+    }
+}
+
+
+
 /* ================================ */
 /* MEDIA QUERY TABLET */
 @media (max-width: 900px) {
@@ -1082,11 +1214,14 @@ hr {
     display: none;
   }
   
-  #mobile.header {
+  #mobile-header {
     display: block;
   }
 
   /* SLIDER */
+  .slider {
+    overflow: hidden;
+  }
   .slider .container {
     background-position-x: 60%;
   }
@@ -1094,18 +1229,21 @@ hr {
     width: 90%;
   }
   .slider .text-container h1 {
-    font-size: 4.5rem;
+    font-size: 5rem;
 
   }
   .slider .text-container p {
     width: 60%;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 3rem;
+  }
+  .slider .text-container a {
+    font-size: 1.5rem;
   }
 
   /* SERVICE 1 */
   .service-1 {
-    height: 1100px;
+    height: 1300px;
   }
   .service-1 .container {
     height: 70%;
@@ -1116,6 +1254,9 @@ hr {
     height: auto;
     width: 80%;
   }
+  .service-1 .text-container h2 {
+    font-size: 4rem;
+  }
   .service-1 .stroke {
     width: 100%;
     margin: 3rem 0 1rem 0;
@@ -1124,9 +1265,16 @@ hr {
     width: 100%;
     text-align: center;
     margin-bottom: 4rem;
+    font-size: 1.4rem;
+  }
+  .service-1 .text-container a {
+    font-size: 1.5rem;
   }
 
   /* ============== ABOUT US ============ */
+  .about-us {
+    height: 1300px;
+  }
   .about-us .container {
     justify-content: center;
 
@@ -1137,38 +1285,90 @@ hr {
   .about-us .container .container-left {
     width: 90%;
   }
+  .about-us .container .container-left h2 {
+    font-size: 4rem;
+  }
+  .about-us .container .container-left p {
+    font-size: 1.3rem;
+  }
   .about-us .container .container-left .values p {
     width: 70%;
+    font-size: 1.3rem;
+  }
+  .about-us .container .container-left .values h3 {
+    font-size: 2rem;
   }
   
   /* SERVICE 2 */
   .service-2 {
-    height: 1500px;
+    height: 1900px;
     display: grid;
     place-items: center;
   }
+  .service-2 h2 {
+    font-size: 4rem;
+  }
   .service-2 .bottom-container {
     flex-direction: column;
+    row-gap: 2rem;
   }
   .service-2 .bottom-container .item {
-    height: 300px;
+    height: 400px;
     width: 60%;
     padding: 1rem;
     margin-bottom: 2rem;
   }
+  .service-2 .bottom-container .item p {
+    font-size: 1.3rem;
+  }
+  .service-2 .bottom-container .item h3 {
+    font-size: 2rem;
+  }
+
+  /* GALLERY */
+  .section-4 {
+    height: 1600px;
+  }
+  .section-4 .container {
+    height: 80%;
+  }
+  .section-4 .container .items {
+    width: 43%;
+  }
+
+
   /* APPOINTMENT */
   .appointment {
-    height: 100vh;
+    height: 1100px;
   }
   .appointment .container-left {
     width: 100%;
   }
+  .appointment .container-left h2 {
+    font-size: 4rem;
+  }
+  .appointment .container-left p {
+    font-size: 1.3rem;
+  }
+  .appointment input[type="text"],
+input[type="email"], input[type='number'] {
+  font-size: 1.3rem;
+  height: 60px;
+}
+.appointment textarea {
+  font-size: 1.3rem;
+  height: 150px;
+  margin-bottom: 3rem;
+}
+.appointment .btn  {
+  font-size: 1.3rem;
+}
 
 
 
   /* OUR STYLISTS */
   .our-stylist {
-    height: 2000px;
+    height: 2300px;
     display: grid;
     place-items: center;
     overflow: hidden;
@@ -1179,9 +1379,21 @@ hr {
   }
   .our-stylist .top-container {
     height: 15%;
+    margin-bottom: 4rem;
+  }
+  .our-stylist .top-container h2 {
+    font-size: 4rem;
+  }
+  .our-stylist .top-container p {
+    font-size: 1.3rem;
   }
   .our-stylist .bottom-container {
     height: 85%;
+    row-gap: 2rem;
+  }
+  .our-stylist .bottom-container p {
+    font-size: 1.3rem;
+    padding: 2.5rem 1rem;
   }
   .our-stylist .top-container #text {
     width: 85%;
@@ -1195,151 +1407,145 @@ hr {
     height: 600px;
   }
 
+  /* CONTACT */
+  .contact-us {
+    height: 900px;
+  }
+  .contact-us .container {
+    width: 80%;
+  }
+  .contact-us .container h2 {
+    font-size: 4rem;
+  }
+  .contact-us .container form .input {
+    flex-wrap: wrap;
+    row-gap: .7rem;
+  }
+  .contact-us .container form input {
+    font-size: 1.3rem;
+    height: 60px;
+    width: 49%;
+  }
+  .contact-us .container form #email {
+    width: 100%;
+  }
+  .contact-us .container form textarea {
+    font-size: 1.3rem;
+    height: 150px;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+  .contact-us .container form #submit {
+    font-size: 1.3rem;
+  }
+
+  /* =========== MAP ============ */
+.map {
+  height: 600px;
+}
+.map .gmap {
+  height: 600px;
+  width: 100%;
+}
+  
+
     /* FOOTER */
   footer {
-    height: 90vh;
+    height: 1250px;
   }
   footer .container {
     flex-direction: column;
+    height: 90%;
   }
   footer .about-container {
     width: 80%;
     margin-bottom: 1em;
   }
+  footer .about-container h4 {
+    font-size: 3rem;
+  }
+  footer .about-container p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
   footer .time-container {
     width: 85%;
     margin-bottom: 1rem;
   }
+  footer .time-container h4 {
+    font-size: 3rem;
+  }
+  footer .time-container p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
   footer .address {
     width: 85%;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+  }
+  footer .address h4 {
+    font-size: 4rem;
+  }
+  footer .address p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
   }
   footer .about-container .i {
     display: flex;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
   footer .about-container i {
     display: block;
   }
-}
-
-/* =========== IPAD PRO ============== */
-@media  screen and (max-width: 1024px) {
-  header {
-    display: none;
+  hr {
+    width: 80%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
   }
-  #mobile-header {
-    display: block;
-  }
-
-  /* ====== SLIDER ========== */
-  .slider .text-container {
-    top: 20%;
-  }
-  .slider .text-container h1 {
-    font-size: 6rem;
-    margin-bottom: 3rem;
-  }
-  .slider .text-container p {
-    font-size: 1.6rem;
-    width: 100%;
-    margin-bottom: 4rem;
-  }
-
-  .service-1 .container {
-    overflow: hidden;
-    height: 65%;
-    width: 90%;
-    column-gap: 1rem;
-  }
-  .service-1 .img-container {
-    width: 50%;
-  }
-  .service-1 .img-container img {
-    right: 70%;
-  }
-
-
-  /* ========= ABOUT US ============ */
-  .about-us .container {
-    width: 90%;
-    column-gap: 3rem;
-    justify-content: center;
-  }
-  .about-us .container-right {
-    width: 53%;
-    height: 650px;
-  }
-  .about-us .container-right img {
-    width: auto;
-    height: 100%;
-  }
-
-
-  /* OUR SERVICE 2 */
-  .service-2 .bottom-container {
-    column-gap: 2rem;
-  }
-  .service-2 .bottom-container .item {
-    height: 500px;
-    width: 33%;
-    margin: 0;
-    padding: 3rem 0;
-  }
-
-
-  /* GALLERY */
-  .section-4 .container .items {
-    height: 295px;
-  }
-  .section-4 .container h3 {
-    left: 10%;
-  }
-  .section-4 .container p {
-    left: 10%;
-    width: 90%;
-  }
-
-  /* ============= APPOINTMENT ========== */
-  .appointment .container {
-    width: 95%;
-  }
-  .appointment img {
-    right: 80%;
-  }
-
-    /* ============= OUR STYLISTS ========== */
-    .our-stylist {
-      height: 1100px;
-    }
-    .our-stylist .container {
-      width: 90%;
-    }
-    .our-stylist .bottom-container > div {
-      width: 30%;
-      height: 70%;
-    }
-
-     /* ============= FOOTER ========== */
-    footer {
-      height: 500px;
-    }
-    footer .container {
-      align-items: flex-start;
-      height: 50%;
-    }
 }
 
 /* ========= IPHONE MEDIA =========== */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+  .slider {
+    height: 900px;
+  }
   .slider .container {
     background-position-x: 70%;
   }
   .slider .text-container h1 {
     font-size: 4rem;
   }
+  .slider .text-container p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .slider .text-container a {
+    font-size: 1.2rem;
+  }
+
+  /* SERVICES */
+  .service-1 {
+    height: 1100px;
+  }
+  .service-1 h2 {
+    font-size: 2.5rem !important;
+    margin-bottom: 0 !important;
+  }
+  .service-1 .stroke {
+    margin-top: 1rem;
+  }
+  .service-1 p {
+    font-size: 1.1rem !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+  .service-1 a {
+    font-size: 1.1rem !important;
+  }
+  /* ABOUT US */
   .about-us {
-    height: 1150px;
+    height: 1400px !important;
   }
   .about-us .container {
     width: 95%;
@@ -1347,17 +1553,42 @@ hr {
   .about-us .container-left {
     width: 100%;
   }
+  .about-us .container-left h2 {
+    font-size: 2.5rem !important;
+  }
+  .about-us .container-left p {
+    font-size: 1.1rem !important;
+  }
+  .about-us .container-left .values h3 {
+    font-size: 1.5rem !important;
+  }
 
   /* OUR SERVICE */
+  .service-2 {
+    height: 1800px !important;
+  }
+  .service-2 .top-container h2 {
+    font-size: 2.5rem;
+  }
+  .service-2 .top-container p {
+    font-size: 1.1rem !important;
+  }
+  .service-2 .container {
+    width: 95%;
+  }
   .service-2 .item h3 {
     margin-bottom: 0;
+    font-size: 1.3rem  !important;
+  }
+  .service-2 .item p {
+    font-size: 1.1rem !important;
   }
   .service-2 .bottom-container {
     row-gap: 2rem;
   }
   .service-2 .bottom-container .item {
     width: 90%;
-    height: 8%;
+    height: 400px;
   }
 
 
@@ -1374,16 +1605,41 @@ hr {
     width: 43%;
     margin: 3px;
   }
+  .section-4 .container .items img {
+    height: auto;
+    width: 100%;
+  }
   .section-4 .container h3 {
     left: 10%;
     top: 10%;
+    font-size: 1.5rem;
   }
   .section-4 .container p {
     left: 10%;
     top: 10%;
+    font-size: 1rem;
   }
 
 
+  /* =========== APPOINTMENT========== */
+  .appointment .container-left h2 {
+    font-size: 2.5rem;
+  }
+  .appointment .container-left p {
+    font-size: 1.1rem;
+  }
+  .appointment input[type="text"],
+  input[type="email"], input[type='number'] {
+    height: 45px;
+    font-size: 1rem;
+  }
+  .appointment textarea {
+    height: 100px;
+    font-size: 1rem;
+  }
+  .appointment .btn {
+    font-size: 1rem;
+  }
 
 
   /* OUR STYLISTS */
@@ -1391,26 +1647,110 @@ hr {
     height: 1500px;
   }
   .our-stylist .container {
-    height: 85%;
+    height: 80%;
     row-gap: 2rem;
+    width: 100% !important;
+  }
+  .our-stylist .top-container p {
+    font-size: 1.1rem !important;
+  }
+  .our-stylist .top-container h2 {
+    font-size: 3rem;
   }
   .our-stylist .bottom-container {
-    width: 90%;
+    width: 85%;
     margin-top: 4rem;
   }
   .our-stylist .bottom-container > div {
-    width: 70%;
-    height: 40%;
+    width: 100%;
+    height: 300px;
+  }
+  .our-stylist .bottom-container p {
+    font-size: 1.1rem !important;
+    padding: 1rem;
+  }
+
+
+  /* =========== CONTACT US =========== */
+  .contact-us {
+    height: 900px;
+  }
+  .contact-us .container h2 {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  .contact-us .container form input {
+    width: 100%;
+    height: 45px;
+    font-size: 1rem;
+  }
+  .contact-us .container form textarea {
+    width: 100%;
+    height: 150px;
+    font-size: 1rem;
+  }
+  .contact-us .container form input[type='submit'] {
+    width: 100%;
+    height: 45px;
+    font-size: 1rem;
+    left: 0;
   }
 
   /* FOOTER  */
   footer {
-    height: 850px;
+    height: 1200px;
   }
   footer .container {
     align-items: center;
     justify-content: center;
     row-gap: 3rem;
+  }
+  footer .about-container {
+    width: 100%;
+  }
+  footer .about-container h4 {
+    font-size: 2.5rem;
+  }
+  footer .about-container p {
+    font-size: 1rem;
+  }
+  footer .time-container {
+    width: 100%;
+  }
+  footer .time-container h4 {
+    font-size: 2.5rem;
+  }
+  footer .time-container p {
+    font-size: 1rem;
+  }
+  footer .address {
+    width: 100%;
+  }
+  footer .address h4 {
+    font-size: 2.5rem;
+  }
+  footer .address p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  footer .about-container .i {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+@media screen and (max-width: 375px) {
+  .section-4 .container .items img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section-4 .container .items img {
+    height: 100%;
+    width: auto;
   }
 }
 
