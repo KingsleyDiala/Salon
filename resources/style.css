@@ -91,6 +91,9 @@ nav {
   height: auto;
 }
 header .container {
+  position: relative;
+  width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -266,7 +269,7 @@ header input[type="checkbox"] {
   background-color: var(--light-text);
 }
 .service-1 .container {
-  width: 80%;
+  max-width: 1200px;
   height: 50%;
   display: flex;
   justify-content: space-between;
@@ -364,7 +367,8 @@ header input[type="checkbox"] {
     place-items: center;
   }
   .about-us .container {
-    width: 80%;
+    position: relative;
+    max-width: 1100px;
     height: 100%;
     display: flex;
     column-gap: 3rem;
@@ -373,7 +377,8 @@ header input[type="checkbox"] {
   }
     /* ==== CONTAINER LEFT ==== */
   .about-us .container-left {
-    width: 40%;
+    position: relative;
+    width: 45%;
     height: auto;
     color: var(--light-text);
     margin-left: -20%;
@@ -438,7 +443,7 @@ header input[type="checkbox"] {
   }
 
 
-/* SERVICE 2 */
+/* UNSER ANGEBOT */
 .service-2 {
   width: 100%;
   height: 900px;
@@ -447,7 +452,7 @@ header input[type="checkbox"] {
   place-items: center;
 }
 .service-2 .container {
-  width: 85%;
+  max-width: 1300px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -481,7 +486,7 @@ header input[type="checkbox"] {
   position: relative;
 }
 .service-2 .bottom-container .item {
-  height: 50vh;
+  height: 450px;
   width: 25%;
   margin: 0 1.7rem;
   background-color: #fff;
@@ -517,7 +522,7 @@ header input[type="checkbox"] {
   align-items: center;
 }
 .section-4 .container {
-  width: 90%;
+  max-width: 1200px;
   height: 65%;
   display: flex;
   flex-flow: wrap;
@@ -584,7 +589,7 @@ header input[type="checkbox"] {
   overflow: hidden;
 }
 .appointment .container {
-  width: 90%;
+  max-width: 1200px;
   height: 90%;
   display: flex;
   justify-content: center;
@@ -686,7 +691,7 @@ input[type="email"], input[type='number'] {
   place-items: center;
 }
 .our-stylist .container {
-  width: 70%;
+  max-width: 1300px;
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -724,8 +729,8 @@ input[type="email"], input[type='number'] {
   text-align: center;
 }
 .our-stylist .bottom-container > div {
-  height: 45vh;
-  width: 25%;
+  height: 350px;
+  width: 30%;
   position: relative;
   box-shadow: .5rem .5rem 1rem 0.4rem rgba(157, 138, 120, 0.4);
   transition: all 0.2s ease;
@@ -770,14 +775,14 @@ input[type="email"], input[type='number'] {
 
 /* ============= C0NTACT  US=============  */
 .contact-us {
-  height: 700px;
+  height: 800px;
   width: 100%;
   background-color: #F8F9FA;
   display: grid;
   place-items: center;
 }
 .contact-us .container {
-  width: 65%;
+  max-width: 1200px;
   height: 90%;
   display: grid;
   place-items: center;
@@ -786,15 +791,20 @@ input[type="email"], input[type='number'] {
   width: 100%;
 }
 .contact-us .container h2 {
+  margin-top: 2rem;
   text-align: center;
 }
 .contact-us .container form .input {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .contact-us .container form input {
-  width: 32%;
+  width: 49.5%;
   height: 3rem;
+}
+.contact-us .container form #email {
+  width: 100%;
 }
 .contact-us .container form input:hover {
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.3);
@@ -837,6 +847,7 @@ input[type="email"], input[type='number'] {
   left: 36%;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
+  margin-bottom: 3rem;
 }
 .contact-us .container form input[type='submit']:hover {
   background-color: transparent;
@@ -866,7 +877,7 @@ footer {
   place-items: center;
 }
 footer .container {
-  width: 85%;
+  max-width: 1000px;
   height: 80%;
   display: flex;
   justify-content: space-between;
