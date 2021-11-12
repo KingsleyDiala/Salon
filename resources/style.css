@@ -224,7 +224,7 @@ header input[type="checkbox"] {
   animation: slide-in-left 1s forwards;
 }
 .slider .text-container p {
-  width: 70%;
+  width: 90%;
   height: auto;
   color: var(--light-text);
   font-weight: 300;
