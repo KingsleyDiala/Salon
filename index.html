@@ -21,7 +21,7 @@
           <!-- Navigation left -->
           <div class="item links">
             <ul>
-              <li><a class="light-link-text" href="#desktop-header">Startseite</a></li>
+              <li><a class="light-link-text" href="#slider">Startseite</a></li>
               <li><a href="#about-us">Über uns</a></li>
               <li><a href="#service-2">Service</a></li>
               <li class="out"><a href="#stylist">Unsere Stylisten</a></li>
@@ -63,7 +63,7 @@
         <div id="navigation" class="nav-links">
           <div class="item links">
             <ul>
-              <li><a class="link light-link-text" href="#mobile-header">Startseite</a></li>
+              <li><a class="link light-link-text" href="#slider">Startseite</a></li>
               <li><a class="link" href="#about-us">Über uns</a></li>
               <li><a class="link" href="#service-2">Service</a></li>
               <li class="out"><a class="link" href="#stylist">Unsere Stylisten</a></li>
@@ -83,7 +83,7 @@
       </nav>
     </header>
     <!-- SLIDER -->
-    <section class="slider">
+    <section id="slider" class="slider">
       <div class="container">
         <div class="overlay">
           <div class="text-container">
@@ -119,7 +119,7 @@
             Von einem fantastischen Haarschnitt über die perfekte Farbe bis hin zu einer frechen Lippe - wir haben alles, was Sie brauchen, um sich nicht nur während Ihres Aufenthalts bei uns, sondern auch noch lange danach wohl zu fühlen.
           </p>
           <button class="btn">
-            <a href="#">Read More</a>
+            <a href="#about-us">Read More</a>
           </button>
         </div>
       </div>
@@ -242,9 +242,11 @@
         <div class="container-left">
           <h2>Termin vereinbaren</h2>
           <p>Unser Team ist bereit, Ihnen zu helfen, den perfekten Look zu finden.</p>
-          <form action="https://formsubmit.co/donbuski2@gmail.com" method="POST">
+          <form action="https://formsubmit.co/kemi.alare@yahoo.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="box">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Buchung. Wir werden Ihnen so schnell wie möglich eine Bestätigung zukommen lassen.">
             <input
               type="text"
               name="Name"
@@ -252,7 +254,7 @@
               id="name"
               placeholder="Ihr Name hier..."
             />
-            <input type="hidden" name="Subject" id="subject" value="New Email From Website!">
+            <input type="hidden" name="Subject" id="subject" value="New Appointment from Website">
             <input
               type="email"
               name="Email"
@@ -274,7 +276,7 @@
         </div>
         <div class="container-right">
           <img
-            src="/img/4.jpeg"
+            src="/img/logo.jpg"
             alt="Photo of a salon"
           />
         </div>
@@ -309,7 +311,12 @@
     <section class="contact-us" id="contact-us">
       <div class="container">
           <h2>Kontaktaufnahme</h2>
-          <form class="form" id="form">
+          <form action="https://formsubmit.co/kemi.alare@yahoo.com" method="POST" class="form" id="form">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="Subject" id="subject" value="New Contact from Website">
+            <input type="hidden" name="_autoresponse" value="Danke, dass Sie sich an uns wenden. Wir werden Ihnen so bald wie möglich antworten.">
+            <input type="text" name="_honey" style="display:none">
             <div class="input">
             <input type="text" name="First Name" id="first-name" placeholder="Vorname..." required>
             <input type="text" name="Last Name" id="last-name" placeholder="Nachname..." required>

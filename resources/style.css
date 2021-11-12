@@ -356,6 +356,7 @@ header input[type="checkbox"] {
 
   /* ============ ABOUT US ============== */
   .about-us {
+    overflow: hidden;
     height: 1032px;
     width: 100%;
     background-color: #3a4040;
@@ -668,10 +669,9 @@ input[type="email"], input[type='number'] {
   margin-right: 0%;
 }
 .appointment img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   position: relative;
-  right: 30%;
   transition: transform .3s ease;
 }
 .appointment img:hover {
@@ -770,7 +770,7 @@ input[type="email"], input[type='number'] {
 
 /* ============= C0NTACT  US=============  */
 .contact-us {
-  height: 600px;
+  height: 700px;
   width: 100%;
   background-color: #F8F9FA;
   display: grid;
@@ -935,7 +935,14 @@ hr {
 
 
 
-@media  screen and (max-width: 1024px) {
+@media  screen and (max-width: 1239px) {
+  .appointment img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media  screen and (max-width: 1120px) {
   header .links a {
     font-size: 1rem;
   }
@@ -989,8 +996,9 @@ hr {
     height: 650px;
   }
   .about-us .container-right img {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    position: relative;
   }
 
 
@@ -1031,9 +1039,6 @@ hr {
   .appointment .container {
     width: 95%;
   }
-  .appointment img {
-    right: 80%;
-  }
 
     /* ============= OUR STYLISTS ========== */
     .our-stylist {
@@ -1071,11 +1076,35 @@ hr {
     }
 }
 
+@media screen and (max-width: 1068px) {
+  .slider {
+    height: 900px;
+  }
+  .slider .text-container h1 {
+    font-size: 4rem;
+  }
+  .slider .text-container p {
+    font-size: 1.1rem;
+  }
+  .about-us .container-right img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  header .out {
+    display: none;
+  }
+  .service-2 .bottom-container .item {
+    padding: 2rem 0;
+    line-height: .5rem;
+    width: 34%;
+  }
 
+}
 
 /* ================================ */
 /* MEDIA QUERY TABLET */
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   p {
     font-size: 1rem;
   }
@@ -1221,6 +1250,7 @@ hr {
   /* SLIDER */
   .slider {
     overflow: hidden;
+    height: 1000px;
   }
   .slider .container {
     background-position-x: 60%;
@@ -1229,12 +1259,12 @@ hr {
     width: 90%;
   }
   .slider .text-container h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
 
   }
   .slider .text-container p {
     width: 60%;
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     margin-bottom: 3rem;
   }
   .slider .text-container a {
@@ -1273,7 +1303,7 @@ hr {
 
   /* ============== ABOUT US ============ */
   .about-us {
-    height: 1300px;
+    height: 1400px;
   }
   .about-us .container {
     justify-content: center;
@@ -1545,7 +1575,7 @@ input[type="email"], input[type='number'] {
   }
   /* ABOUT US */
   .about-us {
-    height: 1400px !important;
+    height: 1500px !important;
   }
   .about-us .container {
     width: 95%;
@@ -1582,6 +1612,7 @@ input[type="email"], input[type='number'] {
   }
   .service-2 .item p {
     font-size: 1.1rem !important;
+    margin-top: 1rem;
   }
   .service-2 .bottom-container {
     row-gap: 2rem;
@@ -1644,7 +1675,7 @@ input[type="email"], input[type='number'] {
 
   /* OUR STYLISTS */
   .our-stylist {
-    height: 1500px;
+    height: 1800px;
   }
   .our-stylist .container {
     height: 80%;
@@ -1663,7 +1694,7 @@ input[type="email"], input[type='number'] {
   }
   .our-stylist .bottom-container > div {
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
   .our-stylist .bottom-container p {
     font-size: 1.1rem !important;
@@ -1748,9 +1779,27 @@ input[type="email"], input[type='number'] {
 }
 
 @media screen and (max-width: 320px) {
+  .slider {
+    height: 1000px;
+  }
   .section-4 .container .items img {
     height: 100%;
     width: auto;
+  }
+  .about-us {
+    height: 1800px !important;
+  }
+  .appointment {
+    height: 900px;
+  }
+  .our-stylist {
+    height: 2000px;
+  }
+  .contact-us {
+    overflow: hidden;
+  }
+  footer {
+    height: 1100px;
   }
 }
 
