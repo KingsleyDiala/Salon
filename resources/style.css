@@ -200,7 +200,7 @@ header input[type="checkbox"] {
 /* SLIDER */
 .slider {
   width: 100%;
-  height: 110vh;
+  height: 1100px;
 }
 .slider .container {
   width: auto;
@@ -548,6 +548,7 @@ header input[type="checkbox"] {
   transition: all 0.2s ease;
   overflow: hidden;
   border-radius: .5rem;
+  object-fit: contain;
 }
 .section-4 .container .items:hover {
   transform: scale(0.97);
@@ -556,6 +557,10 @@ header input[type="checkbox"] {
 .section-4 .container .items img {
   width: 100%;
   height: auto;
+}
+.section-4 .container .items .extra {
+  height: 100%;
+  width: auto;
 }
 .section-4 .container .item-1 {
   background-color: #f2f2f2;
